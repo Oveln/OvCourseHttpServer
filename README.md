@@ -51,6 +51,10 @@
 
 # 存储部署
 
+## Postgresql 说明
+
+将系统环境变量DATABASE_URL设置为数据库连接，程序才可以正常运行
+
 ## SQL脚本
 
 ```sql
