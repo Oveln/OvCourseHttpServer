@@ -48,3 +48,33 @@
   - GET 获取该教师信息
   - PUT 更新该教师信息
   - DELETE 删除该教师信息
+
+# 存储部署
+
+## SQL脚本
+
+```sql
+CREATE TABLE IF NOT EXISTS course
+(
+    id SERIAL integer NOT NULL,
+    teacher_id integer NOT NULL,
+    name varchar(140) NOT NULL,
+    time TIMESTAMP default now(),
+    description varchar(2000),
+    format varchar(30),
+    structure varchar(200),
+    duration varchar(30),
+    price integer,
+    language varchar(30),
+    level varchar(30),
+);
+
+CREATE TABLE IF NOT EXISTS public.teacher
+(
+    id SERIAL integer NOT NULL,
+    name varchar(30) NOT NULL,
+    picture_url varchar(200) NOT NULL,
+    profile varchar(3000) NOT NULL,
+);
+
+```
