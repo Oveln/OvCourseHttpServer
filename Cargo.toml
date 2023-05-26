@@ -1,0 +1,23 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2021"
+default-run = "teacher-service"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.3.1"
+actix-rt = "2.8.0"
+serde = {version = "1.0.163", features = ["derive"]}
+chrono = {version = "0.4.24", features = ["serde"]}
+sqlx = {version = "0.6.3", features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono"
+]}
+dotenv = "0.15.0"
+
+[[bin]]
+name = "teacher-service"
